@@ -13,9 +13,7 @@ In `notebooks`, code covering the logical steps:
 
 In `experiments`, the script to run the experiement design.
 
-In `helpers`, helper function and scripts.
-
-In `src`, the main python script to execute the experiments.
+In `helpers`, the scripts used for utility calculation, optimization, and data aggregation from Google Maps API.
 
 ## References
 
