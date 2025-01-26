@@ -45,7 +45,7 @@ beta_A_k_options = [-0.3]                           # Access time sensitivity
 repetitions_list = list(range(1, 6)) # 5 repetitions
 
 # Read datasets
-od_travel_data_raw = pd.read_csv('./requests/od_travel_data_revised.csv', sep=';', encoding='utf-8')
+od_travel_data_raw = pd.read_csv('./data/od_travel_data_revised.csv', sep=';', encoding='utf-8')
 addresses = pd.read_csv('data/20_css_cop_latlng.csv', sep=';', index_col=0)
 distance_matrix = pd.read_csv('data/20_css_distance_matrix_regenerate.csv', sep=';', index_col=0)
 
@@ -219,7 +219,6 @@ def run_experiment_wrapper(args):
         raise e
     return return_object
         
-
 def run_experiments():
     options = list(product(repetitions_list, num_vehicles_options, P_CS_options, 
                             beta_C_k_options, beta_V_k_options, beta_P_k_options, beta_B_k_options, beta_A_k_options))
