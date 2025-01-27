@@ -26,17 +26,17 @@ pd.set_option('display.max_columns', None) # Show all columns
 
 ### fleet specs
 ## will be varied.
-num_vehicles_options  = [10, 20, 25, 30, 40]
+num_vehicles_options  = [25]
 P_CS_options = [0.2, 0.35, 0.5, 0.65, 0.8]          # Per-minute price of carsharing service
 
 # held constant
 L_options = [0, 1, 2]                               # Fee-levels, not varied between experiments.
 
 ## customer preferences
-beta_C_k_options = [-1.15, -1, -0.85]               # Cost sensitivity
-beta_V_k_options = [-0.30, -0.20, -0.10]            # Vehicle time sensitivity
-beta_P_k_options = [-0.40, -0.30, -0.20]            # Public transit time sensitivity
-beta_B_k_options = [-0.50, -0.40, -0.30]            # Bike time sensitivity                          
+beta_C_k_options = [-1.20, -1.10, -1, -0.90, -0.80] # Cost sensitivity
+beta_V_k_options = [-0.20]                          # Vehicle time sensitivity
+beta_P_k_options = [-0.30]                          # Public transit time sensitivity
+beta_B_k_options = [-0.40]                          # Bike time sensitivity                          
 
 # held constant
 beta_A_k_options = [-0.3]                           # Access time sensitivity
@@ -236,4 +236,4 @@ def run_experiments():
 if __name__ in "__main__":
     print("Running experiments")
     experiment_df = run_experiments()
-    experiment_df.to_csv('data/factorial_output_01.csv', index=False, sep=';', encoding='utf-8')
+    experiment_df.to_csv('data/factorial_output_simple_01.csv', index=False, sep=';', encoding='utf-8')
